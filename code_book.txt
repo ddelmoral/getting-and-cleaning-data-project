@@ -1,0 +1,151 @@
+CodeBook
+
+Thiscode book describes:
+
+- all the variables and summaries calculated, 
+- the data 
+- units
+- any other relevant information
+
+used to clean up the data.
+
+The data for the project was obtained from:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Original description of the dataset: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The description of the data is available at the site :
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The dataset includes the following files:
+
+'README.txt'
+'features_info.txt'
+'features.txt' 
+'activity_labels.txt'
+'train/X_train.txt'
+'train/y_train.txt'
+'test/X_test.txt'
+'test/y_test.txt'
+'train/subject_train.txt'
+'train/Inertial Signals/total_acc_x_train.txt'
+'train/Inertial Signals/body_acc_x_train.txt'
+'train/Inertial Signals/body_gyro_x_train.txt'
+
+The folowing actions are performed by the script:
+
+# Load required libraries 
+# Load activity labels & test data 
+# Extract only the measurements on the mean and standard deviation for each measurement & set activity labels
+# Data merge from tests
+# Load and process X_train & y_train data.
+# Extract mean and standard deviation for each measurement.
+# Set activity labels
+# Data merge from train 
+# Test and train data merge 
+# Apply mean function to dataset using dcast function
+# tidy data file is created 
+
+
+# The scrip requires thefollowing libraries:
+- data.table
+- reshape2
+
+Identifiers:
+
+subject - ID of the test subject
+activity - Type of activity performed 
+
+Measurements:
+
+tBodyAccMeanX
+tBodyAccMeanY
+tBodyAccMeanZ
+tBodyAccStdX
+tBodyAccStdY
+tBodyAccStdZ
+tGravityAccMeanX
+tGravityAccMeanY
+tGravityAccMeanZ
+tGravityAccStdX
+tGravityAccStdY
+tGravityAccStdZ
+tBodyAccJerkMeanX
+tBodyAccJerkMeanY
+tBodyAccJerkMeanZ
+tBodyAccJerkStdX
+tBodyAccJerkStdY
+tBodyAccJerkStdZ
+tBodyGyroMeanX
+tBodyGyroMeanY
+tBodyGyroMeanZ
+tBodyGyroStdX
+tBodyGyroStdY
+tBodyGyroStdZ
+tBodyGyroJerkMeanX
+tBodyGyroJerkMeanY
+tBodyGyroJerkMeanZ
+tBodyGyroJerkStdX
+tBodyGyroJerkStdY
+tBodyGyroJerkStdZ
+tBodyAccMagMean
+tBodyAccMagStd
+tGravityAccMagMean
+tGravityAccMagStd
+tBodyAccJerkMagMean
+tBodyAccJerkMagStd
+tBodyGyroMagMean
+tBodyGyroMagStd
+tBodyGyroJerkMagMean
+tBodyGyroJerkMagStd
+fBodyAccMeanX
+fBodyAccMeanY
+fBodyAccMeanZ
+fBodyAccStdX
+fBodyAccStdY
+fBodyAccStdZ
+fBodyAccMeanFreqX
+fBodyAccMeanFreqY
+fBodyAccMeanFreqZ
+fBodyAccJerkMeanX
+fBodyAccJerkMeanY
+fBodyAccJerkMeanZ
+fBodyAccJerkStdX
+fBodyAccJerkStdY
+fBodyAccJerkStdZ
+fBodyAccJerkMeanFreqX
+fBodyAccJerkMeanFreqY
+fBodyAccJerkMeanFreqZ
+fBodyGyroMeanX
+fBodyGyroMeanY
+fBodyGyroMeanZ
+fBodyGyroStdX
+fBodyGyroStdY
+fBodyGyroStdZ
+fBodyGyroMeanFreqX
+fBodyGyroMeanFreqY
+fBodyGyroMeanFreqZ
+fBodyAccMagMean
+fBodyAccMagStd
+fBodyAccMagMeanFreq
+fBodyBodyAccJerkMagMean
+fBodyBodyAccJerkMagStd
+fBodyBodyAccJerkMagMeanFreq
+fBodyBodyGyroMagMean
+fBodyBodyGyroMagStd
+fBodyBodyGyroMagMeanFreq
+fBodyBodyGyroJerkMagMean
+fBodyBodyGyroJerkMagStd
+fBodyBodyGyroJerkMagMeanFreq
+
+
+Activity labels used in the process :
+
+1 - WALKING 
+2 - WALKING_UPSTAIRS 
+3 - WALKING_DOWNSTAIRS 
+4 - SITTING 
+5 - STANDING
+6 - LAYING 
